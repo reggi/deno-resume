@@ -1,0 +1,10 @@
+{
+  "body": "bg-[#010522] container mx-auto max-w-screen-md py-10 px-10 text-white",
+  ".topImage": "mx-auto rounded-full mb-5",
+  ".summary": "mb-5",
+  ".markdown p": "pb-3",
+  ".markdown a": "text-red-300 hover:text-red-200",
+  ".link": "relative block hover:bg-white hover:text-black rounded-full border-2 text-center p-5 mb-3 md:mb-5",
+  ".linkImage": "absolute rounded-full w-[50px] top-[7px] left-[10px]",
+  ".footer": "text-center"
+}
