@@ -2,7 +2,7 @@
   "tasks": {
     "example": "deno run --allow-net --watch example/server.ts",
     "example-pdf": "deno task start-example & deno task localhost-pdf && deno task open-resume",
-    
+
     "open": "open resume.pdf",
     "pdf": "deno run --allow-env --allow-write --allow-read --allow-run --allow-net pdf.ts",
     "pdf-open": "deno task pdf && deno task open",
