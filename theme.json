@@ -1,0 +1,14 @@
+{
+  "body": "print(text-xs) mx-auto max-w-screen-lg py-10 px-10",
+  "a": "font-medium text-blue-600 dark:text-blue-500 hover:underline",
+  ".topSection": "mb-3 relative",
+  ".name": "print(text-2xl) text-4xl",
+  ".downloadLink": "print(hidden) absolute pt-5 top-0 right-0",
+  ".job": "flex mb-3",
+  ".jobImage": "flex-none pr-3 pt-1",
+  ".jobImage img": "rounded-full",
+  ".job h2": "print(text-lg) text-xl",
+  ".job h3": "print(text-base) inline mr-3 text-lg",
+  ".jobSummary": "mb-2",
+  ".label": "print(font-normal) text-xs font-semibold inline-block px-1 lowercase rounded text-sky-600 bg-sky-200 last:mr-0 mr-1"
+}

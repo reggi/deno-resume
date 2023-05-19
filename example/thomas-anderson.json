@@ -1,0 +1,63 @@
+{
+  "name": "Thomas Anderson",
+  "email": "thomas@neo.com",
+  "phone": "(312)-555-0690",
+  "location": "Chicago, IL",
+  "links": [
+    "http://github.com/thomasanderson",
+    "https://www.linkedin.com/in/thomasanderson"
+  ],
+  "jobs": [
+    {
+      "title": "The One",
+      "summary": "As The One, I fought against the Matrix system, leading a revolution against the machines. I mastered multiple programming languages and acquired exceptional combat skills in various simulated environments.",
+      "start": "January 1999",
+      "end": "Ongoing",
+      "tags": [
+        "The Matrix",
+        "Cybersecurity",
+        "Combat",
+        "Simulation",
+        "Prophecy"
+      ],
+      "company": {
+        "name": "Zion Resistance",
+        "website": "https://www.zionresistance.org/",
+        "logo": "https://static.planetminecraft.com/files/resource_media/screenshot/1217/Matrix-Revolutions-Zion-Dock_2092158.jpg"
+      }
+    },
+    {
+      "title": "Hacker",
+      "summary": "As a skilled hacker, I uncovered the truth about the Matrix, a simulated reality that enslaved humanity. I used my programming knowledge to manipulate the Matrix and evade the agents.",
+      "start": "1995",
+      "end": "1999",
+      "tags": [
+        "Hacking",
+        "Cybersecurity",
+        "Programming",
+        "Simulation"
+      ],
+      "company": {
+        "name": "Red Pill Hackers",
+        "website": "https://www.redpillhackers.com/",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCVTNzVULd7QAjeOGGaaUiL0tqDkypQKs4TQ&usqp=CAU"
+      }
+    },
+    {
+      "title": "Software Developer",
+      "summary": "Before discovering the truth, I worked as a software developer in a mundane office job. Little did I know that my skills would become vital in the fight against the machines.",
+      "start": "1992",
+      "end": "1995",
+      "tags": [
+        "Software Development",
+        "Office Job",
+        "Monotony"
+      ],
+      "company": {
+        "name": "Metacortex",
+        "website": "https://www.metacortex.com/",
+        "logo": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/oir1lmndnago5tfmzcxu"
+      }
+    }
+  ]
+}
