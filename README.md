@@ -2,8 +2,9 @@
 
 > 🦕📄 A Deno resume website builder using tailwind
 
-* On Deno https://deno.land/x/resume
-* On Deno Deploy https://deno-resume.deno.dev/
+* Module Deno https://deno.land/x/resume
+* Hosted Deno Deploy https://deno-resume.deno.dev/
+* Deno Deploy Playground https://dash.deno.com/playground/deno-resume
 * On Github https://github.com/reggi/deno-resume
 
 I saught out to create a resume website with Deno. My requirments were as follows:
