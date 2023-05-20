@@ -2,6 +2,10 @@
 
 > 🦕📄 A Deno resume website builder using tailwind
 
+* On Deno https://deno.land/x/resume@0.0.2
+* On Deno Deploy https://deno-resume.deno.dev/
+* On Github https://github.com/reggi/deno-resume
+
 I saught out to create a resume website with Deno. My requirments were as follows:
 
 - ✅ To serve a Resume webpage as a route using Deno
