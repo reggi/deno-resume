@@ -1,12 +1,10 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { h, VNode } from "https://esm.sh/preact@10.13.2"
+import { h } from "https://esm.sh/preact@10.13.2"
 import { marky } from "https://deno.land/x/marky@v1.1.6/mod.ts"
 import { HTML, HTMLProps } from "./html.tsx"
 import { tailwindObjectToGloablStyles } from "./twind/mod.ts"
-import { renderToString as preactRenderToString } from "https://esm.sh/preact-render-to-string@6.0.3?deps=preact@10.13.2"
 import { Root as Data } from "./types.ts"
-import path from "https://deno.land/std@0.152.0/node/path.ts"
 
 const Url = (props: { children: string }) => {
   return <a href={props.children}>{props.children}</a>
@@ -30,7 +28,7 @@ const applyDomainIfNotAbsolute = (domain: string | undefined, url: string) => {
   return `${domain}${url}`
 }
 
-export const PageComponent = (props: Options) => {
+export const PageComponent = (props: Props) => {
   return (
     <div class="wrapper">
       <div class="topSection">
@@ -120,16 +118,9 @@ interface Meta {
   }
 }
 
-export type Options = Data & HTMLProps & Meta
+export type Props = Data & HTMLProps & Meta
 
-export const preactResponse = (component: VNode): Response => {
-  const html = preactRenderToString(component)
-  return new Response(`<!doctype html>\n${html}`, {
-    headers: { "content-type": "text/html; charset=utf-8" },
-  })
-}
-
-export const ResumeComponent = (props: Options) => {
+export const Resume = (props: Props) => {
   const { style: inlineStyles, data: classData } = tailwindObjectToGloablStyles(
     props.theme || {},
   )
@@ -139,21 +130,3 @@ export const ResumeComponent = (props: Options) => {
     </HTML>
   )
 }
-
-export const route = (props: Options) => {
-  return () => preactResponse(<ResumeComponent {...props} />)
-}
-
-export const renderToString = (props: Options) => {
-  return preactRenderToString(<ResumeComponent {...props} />)
-}
-
-export const saveHTML = async (props: Options, saveLocation: string) => {
-  const html = renderToString(props)
-  const entrypoint = path.isAbsolute(saveLocation)
-    ? saveLocation
-    : path.join(Deno.cwd(), saveLocation)
-  return await Deno.writeTextFile(entrypoint, html)
-}
-
-export default route
