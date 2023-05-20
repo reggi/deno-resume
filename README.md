@@ -2,7 +2,7 @@
 
 > 🦕📄 A Deno resume website builder using tailwind
 
-* On Deno https://deno.land/x/resume@0.0.2
+* On Deno https://deno.land/x/resume
 * On Deno Deploy https://deno-resume.deno.dev/
 * On Github https://github.com/reggi/deno-resume
 
