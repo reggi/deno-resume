@@ -26,7 +26,7 @@ The resume data is a JSON object. Heres the [type definition](./src/types.ts). H
 
 I've put some detail into the serveral ways this project can be used and I'll try and document some usages here.
 
-## Programatic Usage
+## Programmatic Usage
 
 If you want to run your own resume page, say on Deno Deploy this is a single-file that would get you started.
 
