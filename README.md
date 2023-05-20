@@ -2,18 +2,14 @@
 
 > 🦕📄 A Deno resume website builder using tailwind
 
-## Why
-
-I saught out to create a resume website with Deno.
-
-My requirments were as follows:
+I saught out to create a resume website with Deno. My requirments were as follows:
 
 - ✅ To serve a Resume webpage as a route using Deno
 - ✅ To generiate a static HTML document with no extenral CSS OR JS dependencies
 - ✅ To customize `print` css clases for people to easily print the page
 - ✅ To export create a PDF of the site programatically
 
-This project achieves all of those goals. 
+This project achieves all of those goals 🎉.
 
 ## How it works
 
