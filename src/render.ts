@@ -1,8 +1,8 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { h, JSX } from "https://esm.sh/preact@10.13.2"
-import { renderToString as preactRenderToString } from "https://esm.sh/preact-render-to-string@6.0.3?deps=preact@10.13.2"
-import * as path from "https://deno.land/std/path/mod.ts"
+import { renderToString as preactRenderToString } from "https://esm.sh/v124/preact-render-to-string@6.0.3?deps=preact@10.13.2"
+import * as path from "node:path"
 
 export type Component<Props> = (props: Props) => JSX.Element
 

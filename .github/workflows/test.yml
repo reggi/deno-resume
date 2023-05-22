@@ -25,5 +25,11 @@ jobs:
         run: deno fmt --no-semicolons --check
       - name: Build Deno Module
         run: deno run --reload mod.ts
+      - name: Build PDF Module
+        run: deno run --reload pdf/mod.ts
+      - name: Build Serve Module
+        run: deno run --reload serve/mod.ts
+      - name: Build Render Module
+        run: deno run --reload render/mod.ts
       - name: Test Deno Module
         run: deno test --allow-none
