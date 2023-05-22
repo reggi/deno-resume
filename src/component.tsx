@@ -5,7 +5,7 @@ import { marky } from "https://deno.land/x/marky@v1.1.6/mod.ts"
 import { HTML, HTMLProps } from "./html.tsx"
 import { tailwindObjectToGloablStyles } from "./twind/mod.ts"
 import { Root as Data } from "./types.ts"
-import theme from '../theme.json' assert { type: 'json' }
+import theme from "../theme.json" assert { type: "json" }
 
 const Url = (props: { children: string }) => {
   return <a href={props.children}>{props.children}</a>
@@ -23,7 +23,10 @@ const Markdown = (props: { children: string; class?: string }) => {
 const urlPattern =
   /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/
 
-export const applyDomainIfNotAbsolute = (domain: string | undefined, url: string) => {
+export const applyDomainIfNotAbsolute = (
+  domain: string | undefined,
+  url: string,
+) => {
   if (url.startsWith("data:image")) return url
   if (url.match(urlPattern)) return url
   if (domain) return `${domain}${url}`

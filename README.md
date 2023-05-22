@@ -2,12 +2,13 @@
 
 > 🦕📄 A Deno resume website builder using tailwind
 
-* Module Deno https://deno.land/x/resume
-* Hosted Deno Deploy https://deno-resume.deno.dev/
-* Deno Deploy Playground https://dash.deno.com/playground/deno-resume
-* On Github https://github.com/reggi/deno-resume
+- Module Deno https://deno.land/x/resume
+- Hosted Deno Deploy https://deno-resume.deno.dev/
+- Deno Deploy Playground https://dash.deno.com/playground/deno-resume
+- On Github https://github.com/reggi/deno-resume
 
-I sought out to create a resume website with Deno. My requirements were as follows:
+I sought out to create a resume website with Deno. My requirements were as
+follows:
 
 - ✅ To serve a Resume webpage as a route using Deno
 - ✅ To generate a static HTML document with no external CSS OR JS dependencies
@@ -18,25 +19,33 @@ This project achieves all of those goals 🎉.
 
 ## How it works
 
-The resume data is a JSON object. Here's the [type definition](./src/types.ts). Here's an [example of the data](./example/thomas-anderson.json). This is used as the main props passed into the `Resume` page component.
+The resume data is a JSON object. Here's the [type definition](./src/types.ts).
+Here's an [example of the data](./example/thomas-anderson.json). This is used as
+the main props passed into the `Resume` page component.
 
 ![screenshot](./example/output/screenshot.png)
 
-* [Example HTML Export](./example/output/index.html)
-* [Example PDF Export](./example/output/resume.pdf)
+- [Example HTML Export](./example/output/index.html)
+- [Example PDF Export](./example/output/resume.pdf)
 
-I've put some detail into the several ways this project can be used and I'll try and document some usages here.
+I've put some detail into the several ways this project can be used and I'll try
+and document some usages here.
 
 ## Programmatic Usage
 
-If you want to run your own resume page, say on Deno Deploy this is a single-file that would get you started.
+If you want to run your own resume page, say on Deno Deploy this is a
+single-file that would get you started.
 
 ```ts
 import { serve } from "https://deno.land/std@0.188.0/http/server.ts"
 import { router } from "https://crux.land/router@0.0.12"
 import resume from "https://deno.land/x/resume/mod.ts"
-import data from "https://deno.land/x/resume/example/thomas-anderson.json" assert { type: "json" }
-import theme from "https://deno.land/x/resume/theme.json" assert { type: "json" }
+import data from "https://deno.land/x/resume/example/thomas-anderson.json" assert {
+  type: "json",
+}
+import theme from "https://deno.land/x/resume/theme.json" assert {
+  type: "json",
+}
 
 await serve(router({
   "/": resume({
@@ -48,7 +57,12 @@ await serve(router({
 
 ## Theming
 
-The theme is a JSON object where the key is a CSS selector and the value are tailwind classes. `twind` does not have support for `print()`, I added the ability to expand that keyword. Anything within the `print()` parenthesis will be given the `print:` prefix. I also added in feature for setting tag attributes using the syntax `[width=20]` this could be used for setting image sizes and `alt` text or really any attribute.
+The theme is a JSON object where the key is a CSS selector and the value are
+tailwind classes. `twind` does not have support for `print()`, I added the
+ability to expand that keyword. Anything within the `print()` parenthesis will
+be given the `print:` prefix. I also added in feature for setting tag attributes
+using the syntax `[width=20]` this could be used for setting image sizes and
+`alt` text or really any attribute.
 
 ```json
 {
@@ -71,11 +85,15 @@ The theme is a JSON object where the key is a CSS selector and the value are tai
 
 The CLI is broken down into 3 different scripts.
 
-* `./pdf/cmd.ts`
-* `./serve/cmd.ts`
-* `./render/cmd.ts`
+- `./pdf/cmd.ts`
+- `./serve/cmd.ts`
+- `./render/cmd.ts`
 
-This isolates dependencies for each, meaning if you just wanted to say `render` you don't need to install the `pdf` dependencies (puppeteer). All of these files are dynamically imported into the single `./cmd.ts` file which will be used for this documentation, but you could call any of these files directly for individual usage.
+This isolates dependencies for each, meaning if you just wanted to say `render`
+you don't need to install the `pdf` dependencies (puppeteer). All of these files
+are dynamically imported into the single `./cmd.ts` file which will be used for
+this documentation, but you could call any of these files directly for
+individual usage.
 
 ### Serve a JSON file
 
@@ -85,7 +103,7 @@ deno run ./cmd.ts --serve --json ./example/thomas-anderson.json
 deno run --allow-read --allow-net ./cmd.ts --serve --json ./example/thomas-anderson.json
 ```
 
-### Generate a PDF 
+### Generate a PDF
 
 ```bash
 deno run ./cmd.ts --pdf ./example/output/resume.pdf --json ./example/thomas-anderson.json

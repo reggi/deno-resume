@@ -1,10 +1,9 @@
+import pdf from "./pdf/mod.ts"
+import render from "./render/mod.ts"
+import serve from "./serve/mod.ts"
 
-import pdf from './pdf/mod.ts'
-import render from './render/mod.ts'
-import serve from './serve/mod.ts'
-
-export type * from './src/component.tsx'
-export * from './render/mod.ts'
+export type * from "./src/component.tsx"
+export * from "./render/mod.ts"
 
 export { serve }
 export { pdf }

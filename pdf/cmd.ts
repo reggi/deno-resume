@@ -1,6 +1,6 @@
-import { pdf } from "./mod.ts";
-import { commandInput } from "../src/util.ts";
+import { pdf } from "./mod.ts"
+import { commandInput } from "../src/util.ts"
 
 const { props, flags } = await commandInput()
 
-await pdf(props, typeof flags.pdf == 'string' ? flags.pdf : 'resume.pdf')
+await pdf(props, typeof flags.pdf == "string" ? flags.pdf : "resume.pdf")
