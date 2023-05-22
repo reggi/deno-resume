@@ -2,7 +2,7 @@
 /** @jsxFrag Fragment */
 import { h, JSX } from "https://esm.sh/preact@10.13.2"
 import { renderToString as preactRenderToString } from "https://esm.sh/v124/preact-render-to-string@6.0.3?deps=preact@10.13.2"
-import * as path from "node:path"
+import * as path from "https://deno.land/std@0.177.0/node/path.ts";
 
 export type Component<Props> = (props: Props) => JSX.Element
 

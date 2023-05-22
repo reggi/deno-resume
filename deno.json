@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "lock": "deno cache --lock=deno.lock --lock-write mod.ts serve/mod.ts pdf/mod.ts render/mod.ts cmd.ts"
+  }
+}

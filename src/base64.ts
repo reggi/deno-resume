@@ -1,4 +1,4 @@
-import path from "node:path"
+import * as path from "https://deno.land/std@0.177.0/node/path.ts";
 import { encode } from "https://deno.land/std@0.185.0/encoding/base64.ts"
 import { contentType as getContentType } from "https://deno.land/std@0.185.0/media_types/content_type.ts"
 import { applyDomainIfNotAbsolute, Props } from "./component.tsx"
