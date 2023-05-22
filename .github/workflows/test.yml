@@ -24,6 +24,6 @@ jobs:
       - name: Lint Deno Module
         run: deno fmt --no-semicolons --check
       - name: Build Deno Module
-        run: deno run --reload mod.tsx
+        run: deno run --reload mod.ts
       - name: Test Deno Module
         run: deno test --allow-none
