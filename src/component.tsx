@@ -5,6 +5,7 @@ import { marky } from "https://deno.land/x/marky@v1.1.6/mod.ts"
 import { HTML, HTMLProps } from "./html.tsx"
 import { tailwindObjectToGloablStyles } from "./twind/mod.ts"
 import { Root as Data } from "./types.ts"
+import theme from '../theme.json' assert { type: 'json' }
 
 const Url = (props: { children: string }) => {
   return <a href={props.children}>{props.children}</a>
@@ -122,6 +123,7 @@ interface Meta {
 export type Props = Data & HTMLProps & Meta
 
 export const Resume = (props: Props) => {
+  props.theme = props.theme || theme
   const { style: inlineStyles, data: classData } = tailwindObjectToGloablStyles(
     props.theme || {},
   )
