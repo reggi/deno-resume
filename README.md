@@ -7,25 +7,25 @@
 * Deno Deploy Playground https://dash.deno.com/playground/deno-resume
 * On Github https://github.com/reggi/deno-resume
 
-I saught out to create a resume website with Deno. My requirments were as follows:
+I sought out to create a resume website with Deno. My requirements were as follows:
 
 - ✅ To serve a Resume webpage as a route using Deno
-- ✅ To generiate a static HTML document with no extenral CSS OR JS dependencies
-- ✅ To customize `print` css clases for people to easily print the page
+- ✅ To generate a static HTML document with no external CSS OR JS dependencies
+- ✅ To customize `print` css classes for people to easily print the page
 - ✅ To export create a PDF of the site programatically
 
 This project achieves all of those goals 🎉.
 
 ## How it works
 
-The resume data is a JSON object. Heres the [type definition](./src/types.ts). Here's an [example of the data](./example/thomas-anderson.json). This is used as the main props passed into the `Resume` page component.
+The resume data is a JSON object. Here's the [type definition](./src/types.ts). Here's an [example of the data](./example/thomas-anderson.json). This is used as the main props passed into the `Resume` page component.
 
 ![screenshot](./example/output/screenshot.png)
 
 * [Example HTML Export](./example/output/index.html)
 * [Example PDF Export](./example/output/resume.pdf)
 
-I've put some detail into the serveral ways this project can be used and I'll try and document some usages here.
+I've put some detail into the several ways this project can be used and I'll try and document some usages here.
 
 ## Programmatic Usage
 
@@ -48,7 +48,7 @@ await serve(router({
 
 ## Theming
 
-The theme is a JSON object where the key is a CSS selector and the value are tailwind classes. `twind` does not have support for `print()`, I added the ability to expand that keyword. Anything within the `print()` paraenthesis will be given the `print:` prefix. I also added in feature for setting tag attributes using the syntax `[width=20]` this could be used for setting image sizes and `alt` text or really any attribute.
+The theme is a JSON object where the key is a CSS selector and the value are tailwind classes. `twind` does not have support for `print()`, I added the ability to expand that keyword. Anything within the `print()` parenthesis will be given the `print:` prefix. I also added in feature for setting tag attributes using the syntax `[width=20]` this could be used for setting image sizes and `alt` text or really any attribute.
 
 ```json
 {
